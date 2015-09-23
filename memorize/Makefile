@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++11
-INCLUDES = -I.
-LIBS = 
+INCLUDES = -I. -I/usr/local/opt/openblas/include
+LIBS = -lcblas -lkadare
 HEADERS := $(wildcard ./*.hpp)
 SRCS = $(wildcard ./*.cpp)
 OBJS = $(addprefix ./, $(SRCS:.cpp=.o))
